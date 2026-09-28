@@ -1,3 +1,5 @@
+# 입력 방식과 출력 방식을 무조건 만들어야 됨.
+# 디버깅 F9 + F5
 from pathlib import Path
 import cv2
 # 마우스 이벤트 처리 함수 정의
