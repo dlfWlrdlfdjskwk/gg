@@ -1,5 +1,9 @@
 from pathlib import Path
 import cv2
+# 마우스 이벤트 처리 함수 정의
+def on_mouse(event, x, y, flags, param):
+    if event == cv2.EVENT_LBUTTONDOWN:
+        print(f'좌표 : ({x}, {y})')
 
 SOURCE = str('road.mp4')
 # 동영상 파일 열기
