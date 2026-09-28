@@ -40,6 +40,12 @@ while True:
 
     cv2.imshow('RESULT', result)
 
+    bright = cv2.add(gray,60)
+    dark = cv2.subtract(gray,60)
+    cv2.imshow('BRIGHT', bright)
+    cv2.imshow('DARK', dark)
+
+
     key = cv2.waitKey(dalay) & 0xFF
     # s 키 -> 현재 프레임을 이미지로 저장
     if key ==ord('s'):
