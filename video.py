@@ -24,6 +24,16 @@ while True:
     # 현재 프레임을 화면에 표시
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     cv2.imshow('CAPTURE', frame)
+    cv2.imshow('GRAY', gray)
+
+    result = frame.copy()
+    cv2.line(result, (30,60), (220,60), (255,0,0),3)
+    cv2.rectangle(result, (30,80), (220,120), (0,255,0), 3)
+    cv2.circle(result, (120,200), 40, (0,0,255), -1)
+    cv2.putText(result, 'Result', (30,300), cv2.FONT_HERSHEY_SIMPLEX, 1, (255,255,0), 2, cv2.LINE_AA)
+
+    cv2.imshow('RESULT', result)
+
     key = cv2.waitKey(dalay) & 0xFF
     # s 키 -> 현재 프레임을 이미지로 저장
     if key ==ord('s'):
