@@ -8,7 +8,11 @@ threshold_value = gray.mean() # 평균값으로 임계값 설정
 print(gray.min(), gray.max(), gray.mean())
 # threshold_value = 120
 _, binary = cv2.threshold(gray, threshold_value, 255,cv2.THRESH_BINARY)
+
+tv, otsu = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
+
 cv2.imshow('GRAY', gray)
 cv2.imshow('BINARY', binary)
+cv2.imshow('OTSU', otsu)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
